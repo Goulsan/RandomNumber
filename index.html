@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Случайный текст</title>
+  <script>
+    // Массив с предопределёнными текстами
+    var texts = [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ];
+
+    // Функция для выбора случайного текста из массива
+    function displayRandomText() {
+      var randomIndex = Math.floor(Math.random() * texts.length);
+      var randomText = texts[randomIndex];
+      document.getElementById('random-text').textContent = randomText;
+    }
+
+    // Вызов функции при загрузке страницы
+    window.onload = displayRandomText;
+  </script>
+</head>
+<body>
+  <div id="random-text" style="text-align: center; margin-top: 20%; font-size: 2em;"></div>
+</body>
+</html>
